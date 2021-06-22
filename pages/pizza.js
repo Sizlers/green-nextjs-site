@@ -59,7 +59,7 @@ export default function StaticPage({data}) {
   return (
     <div className="mx-4 font-roboto">
       <header className="mt-4 mb-16 w-full bg-gradient-to-r from-green-400 to-blue-500 flex justify-center content-center">
-        <h1 className="text-4xl text-white py-24 font-bold">Steaks.</h1>
+        <h1 className="text-4xl text-white py-24 font-bold">Pizza.</h1>
       </header>
       
       <p className="text-lg text-center mb-16 max-w-5xl mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet a metus fringilla rutrum. Fusce ac risus cursus, mollis odio nec, efficitur justo. In odio lacus, elementum vitae mi sodales, imperdiet ornare dui. Sed facilisis orci non mi malesuada, ornare commodo ex ullamcorper. Curabitur quis metus lobortis, accumsan purus sit amet, luctus ipsum. Quisque dictum nulla mauris, tempor sagittis nibh faucibus eu. Aliquam nunc justo, lacinia a leo accumsan, volutpat euismod nisl. Fusce erat sapien, dapibus eu nisi vitae, suscipit vehicula mauris.</p>
