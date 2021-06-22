@@ -35,7 +35,7 @@ export default function StaticPage({data}) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`https://api.unsplash.com/search/photos?page=1&query=burgers&client_id=${process.env.UNSPLASHKEY}=1&per_page=36`)
+  const res = await fetch(`https://api.unsplash.com/search/photos?page=1&query=burgers&client_id=${process.env.UNSPLASHKEY}=1&per_page=18`)
   const data = await res.json()
 
   if (!data) {
