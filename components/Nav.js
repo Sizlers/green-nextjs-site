@@ -12,6 +12,9 @@ export default function Nav() {
         <li className={router.pathname == "/cakes" ? "w-24 text-lg underline font-bold text-blue-600" : "w-24 text-lg underline"}>
           <Link href="/cakes">Cakes</Link>
         </li>
+        <li className={router.pathname == "/steaks" ? "w-24 text-lg underline font-bold text-blue-600" : "w-24 text-lg underline"}>
+          <Link href="/steaks">Steaks</Link>
+        </li>
       </ul>
     </nav>
   )
