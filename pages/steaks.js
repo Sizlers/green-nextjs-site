@@ -26,6 +26,7 @@ export default function StaticPage({data}) {
   const {results} = data
   const [page, setPage] = useState(1);
   const [displayArray, setDisplayArray] = useState([]);
+  const [renderSlider, setRenderSlider] = useState(false);
   let i = 0
   const modulo = 9
   let pageArray = []
@@ -46,8 +47,8 @@ export default function StaticPage({data}) {
 
   const scrollHandler = () => {
     if(window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop) {
-      console.log(page + 1);
       setPage(page + 1);
+      setRenderSlider(true);
     }
   } 
 
@@ -76,8 +77,10 @@ export default function StaticPage({data}) {
 
       <div ref={hiddenRef}></div>
 
-
-      <div className="max-w-4xl mx-auto mt-16 relative"> 
+      
+      {
+        renderSlider &&
+        <div className="max-w-4xl mx-auto mt-16 relative"> 
         <CarouselProvider
             naturalSlideWidth={400}
             naturalSlideHeight={300}
@@ -92,6 +95,10 @@ export default function StaticPage({data}) {
             <ButtonNext className="absolute right-0 top-1/2 translate-y-1/2 bg-white text-blue-500 block p-4 font-bold">Next</ButtonNext>
           </CarouselProvider>
       </div>
+
+      }
+
+
 
 
     </div>)
