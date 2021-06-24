@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function GridItem({props}) {
   
@@ -73,8 +75,26 @@ export default function StaticPage({data}) {
       </div>
 
       <div ref={hiddenRef}></div>
-    </div>
-  )
+
+
+      <div className="max-w-4xl mx-auto mt-16 relative"> 
+        <CarouselProvider
+            naturalSlideWidth={400}
+            naturalSlideHeight={300}
+            totalSlides={results.length}
+          >
+            <Slider>
+              {
+                results.map((item, i) => <Slide index={i} key={item.id}><Image src={item.urls.small} alt={item.alt_description} height={300} width={400} layout="responsive" placeholder="blur" blurDataURL={item.urls.thumb} /></Slide>)
+              }
+            </Slider>
+            <ButtonBack className="absolute left-0 top-1/2 translate-y-1/2 bg-white text-blue-500 block p-4 font-bold">LEFT</ButtonBack>
+            <ButtonNext className="absolute right-0 top-1/2 translate-y-1/2 bg-white text-blue-500 block p-4 font-bold">Next</ButtonNext>
+          </CarouselProvider>
+      </div>
+
+
+    </div>)
 }
 
 export async function getStaticProps(context) {

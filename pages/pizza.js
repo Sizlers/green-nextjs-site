@@ -71,7 +71,6 @@ export default function StaticPage({data}) {
           displayArray.map((item) => <GridItem key={item.id} props={item} />)
         }
       </div>
-
       <div ref={hiddenRef}></div>
     </div>
   )
