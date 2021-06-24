@@ -7,7 +7,6 @@ function GridItem({props}) {
   
   const {urls, alt_description, description} = props;
   if(urls) {
-    const {urls, alt_description, description} = props;
     return (
       <div className="border-2 p-4 relative">
         <Image src={urls.small} alt={alt_description} height={300} width={400} layout="responsive" placeholder="blur" blurDataURL={urls.thumb} />
@@ -16,7 +15,6 @@ function GridItem({props}) {
       </div>
     )
   }
-
   return null
 }
 
@@ -77,7 +75,6 @@ export default function StaticPage({data}) {
 
       <div ref={hiddenRef}></div>
 
-      
       {
         renderSlider &&
         <div className="max-w-4xl mx-auto mt-16 relative"> 
