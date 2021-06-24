@@ -9,7 +9,7 @@ function GridItem({props}) {
   if(urls) {
     return (
       <div className="border-2 p-4 relative">
-        <Image src={urls.small} alt={alt_description} height={300} width={400} layout="responsive" placeholder="blur" blurDataURL={urls.thumb} />
+        <Image src={urls.small} alt={alt_description} height={275} width={367} layout="responsive" placeholder="blur" blurDataURL={urls.thumb} />
 
         <p className="mt-4 break-all font-viaoda">{description}</p>
       </div>
